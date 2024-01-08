@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Offers from './components/Offers'
 import './App.css'
+import Plan from './components/Plan'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Hero />
       <Offers />
+      <Plan />
       </div>
     
   )
