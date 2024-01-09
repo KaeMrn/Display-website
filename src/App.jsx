@@ -8,6 +8,7 @@ import Plan from './components/Home/Plan'
 import Intro from './components/Home/Intro'
 import Reservations from './components/Reserve/Reservations';
 import Footer from './components/Home/Footer';
+import './components/Reserve/Calendar.css'
 
 function App() {
 

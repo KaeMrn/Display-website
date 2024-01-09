@@ -3,7 +3,7 @@ import ReactCalendar from 'react-calendar'
 
 export default function Calendar(){
     return(
-        <div>
+        <div className="mt-16">
             <ReactCalendar minDate={new Date()}
             className = 'REACT-CALENDAR p-2' 
             view='month' 
