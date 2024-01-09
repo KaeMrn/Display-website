@@ -12,7 +12,7 @@ export default function Hero() {
         <p className='max-w-[600px] drop-shadow-2xl py-2 text-xl'>The best restaurant in town</p>
         <h1 className='font-bold text-5xl md:text-7xl drop-shadow-2xl'>High quality food for the high developped pallets</h1>
         <p className='max-w-[600px] drop-shadow-2xl py-2 text-xl'>Make sure to make a reservation to get the experience of a lifetime </p>
-        <Button title= "Reserve Now" />
+        <Button title= "Reserve Now" className={'border-gray-400'} />
        </div>
        </div>
     </div>

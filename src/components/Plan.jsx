@@ -18,8 +18,10 @@ export default function Plan(){
         <h3 className='text-5xl md:text-6xl font-bold'>Try our dishes</h3>
         <p className='text-2xl py-6'>Indulge in a culinary adventure with our diverse menu, featuring the freshest ingredients and bold flavors. From classic favorites to innovative creations, each dish is crafted to perfection,
            offering a delightful experience for your taste buds. Join us for a meal and let your senses be captivated by our chef's exquisite specialties.</p>
-        <p>Take a look at our diverse menu now!</p>   
-        <div><Button title="Menu" className={'bg-red-500'}/></div>
+        <p className='pb-6'>Take a look at our diverse menu now!</p>   
+        <div className='mt-3'>
+          <Button title="Menu" className='border-black'/>
+        </div>
       </div>
     
     </div>

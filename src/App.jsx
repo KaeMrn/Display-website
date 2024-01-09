@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Offers from './components/Offers'
 import './App.css'
 import Plan from './components/Plan'
+import Intro from './components/Intro'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <div>
       <Navbar />
       <Hero />
+      <Intro />
       <Offers />
       <Plan />
       </div>

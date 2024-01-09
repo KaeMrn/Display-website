@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Button = ({title, onClick, className, type ="button"}) => {
-    const buttonClass = `border-black py-2 px-3 rounded-full bg-white text-black shadow-md hover:shadow-xl transition-shadow ${className}`.trim();
+    const buttonClass = `border py-2 px-3 rounded-full bg-white text-black shadow-md hover:shadow-xl transition-shadow ${className}`.trim();
 
 
   return (
