@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Offers from './components/Offers'
+import Hero from './components/Home/Hero'
+import Offers from './components/Home/Offers'
 import './App.css'
-import Plan from './components/Plan'
-import Intro from './components/Intro'
+import Plan from './components/Home/Plan'
+import Intro from './components/Home/Intro'
 import Reservations from './components/Reservations';
 
 function App() {

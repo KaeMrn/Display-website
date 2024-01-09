@@ -1,6 +1,6 @@
 import React from 'react'
-import Inside from '../assets/Inside.png'
-import Button from './Button'
+import Inside from '../../assets/Inside.png'
+import Button from '../Button'
 
 export default function Hero() {
   return (
