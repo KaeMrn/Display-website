@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div className='w-full h-screen'>
        <img src={Inside} alt="inside view" className='top-0 left-0 w-full h-screen object-cover'/>
-       <div className='bg-black/30 absolute top-0 left-0 w-full h-screen'/>
+       <div className='bg-black-gradient absolute top-0 left-0 w-full h-screen'/>
        <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-center text-white'>
         <div className='md:left-[10%] max-w-[1100px] m-auto absolute p-4'>
         <p className='max-w-[600px] drop-shadow-2xl py-2 text-xl'>The best restaurant in town</p>
