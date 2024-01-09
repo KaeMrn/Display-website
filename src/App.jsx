@@ -6,7 +6,8 @@ import Offers from './components/Home/Offers'
 import './App.css'
 import Plan from './components/Home/Plan'
 import Intro from './components/Home/Intro'
-import Reservations from './components/Reservations';
+import Reservations from './components/Reserve/Reservations';
+import Footer from './components/Home/Footer';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             <Intro />
             <Offers />
             <Plan />
+            <Footer />
           </>
         } />
         <Route path="/reservations" element={<Reservations />} />
