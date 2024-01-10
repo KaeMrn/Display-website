@@ -13,8 +13,30 @@ export default function Form() {
         </div>
 
         <div className="bg-white p-5 lg:flex flex-col lg:w-2/3 h-full w-full flex justify-center items-center">
-          <form className="bg-red-200 w-full h-full">
-            form
+          <form className="bg-red-200 w-full h-full p-4">
+          <h2 className='text-3xl p-4 text-center'>Make A Reservation</h2>
+        <div className="fields flex flex-row gap-2">
+        <div className='w-1/2 flex-col bg-blue-50 '>
+          <label className='text-md font-medium'
+          htmlFor="username">Full Name</label>
+          <input 
+            className='border-2 mt-2 py-1 px-2 border-gray-300 rounded block min-h-[auto] w-full'
+            type="text"
+         
+          />
+        </div>
+        <div className="bg-green-50 w-1/2 flex-col">
+        <label className='text-md font-medium'
+          htmlFor="username">Number of People</label>
+          <input 
+            className='border-2 mt-2 py-1 px-2 border-gray-300 rounded block min-h-[auto] w-full'
+            type="number"
+           
+          />
+
+        </div>  
+        
+        </div>  
           </form>
         </div>
       </div>
