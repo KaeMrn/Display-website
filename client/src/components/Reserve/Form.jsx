@@ -1,75 +1,23 @@
-import React, { useState } from "react";
-import {Link} from 'react-router-dom';
+import React from "react";
 
-export default function Form(){
-    
-
-    return (
-        <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div className="border rounded-lg shadow-sm bg-white dark:bg-gray-800">
-            <div className="flex flex-row items-center justify-between pb-2 space-y-0 px-4 pt-4">
-              <h2 className="text-sm font-medium">Make a Reservation</h2>
-            </div>
-            <div className="p-4">
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-700" htmlFor="date">
-                    Date
-                  </label>
-                  <input
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    id="date"
-                    required
-                    type="date"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-700" htmlFor="time">
-                    Time
-                  </label>
-                  <input
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    id="time"
-                    required
-                    type="time"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-700" htmlFor="guests">
-                    Number of Guests
-                  </label>
-                  <input
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    id="guests"
-                    min="1"
-                    required
-                    type="number"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-700" htmlFor="requirements">
-                    Special Requirements
-                  </label>
-                  <input
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    id="requirements"
-                    type="text"
-                  />
-                </div>
-                <button
-                  className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  type="submit"
-                >
-                  Book Reservation
-                </button>
-              </form>
-            </div>
-          </div>
+export default function Form() {
+  return (
+    <div className="h-screen flex justify-center items-center overflow-hidden relative">
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1482275548304-a58859dc31b7?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center blur-sm"></div>
+      
+      <div className="border-none h-[60vh] w-full mt-6 flex flex-row mx-20 border relative">
+        <div className="flex-col lg:flex lg:w-[1/3] h-full hidden">
+          <img src="https://images.unsplash.com/photo-1482275548304-a58859dc31b7?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          alt="" 
+          className="object-cover w-full h-full"/>
         </div>
-      </main>
-  )
+
+        <div className="bg-white p-5 lg:flex flex-col lg:w-2/3 h-full w-full flex justify-center items-center">
+          <form className="bg-red-200 w-full h-full">
+            form
+          </form>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-
-
