@@ -13,13 +13,13 @@ const Navbar = () => {
  
 
   return (
-    <div className="fixed top-0 left-0 z-50 flex justify-between items-center h-18 shadow-2xl w-full bg-black opacity-70 px-4 text-white">
+    <div className="fixed top-0 left-0 z-50 flex justify-between items-center h-18 shadow-2xl w-full bg-black opacity-85 px-4 text-white">
       <h1 className="w-full text-3xl ml-2 font-bold text-white">Restaurant.</h1>
       <ul className='hidden md:flex'>
         <li className="p-4"><Link to="/">Home</Link></li>
         <li className="p-4">Menu</li>
         <li className="p-4"><Link to="/reservations">Reservations</Link></li>
-        <li className="p-4">Contacts</li>        
+        <li className="p-4">Contact</li>        
         
         
         
