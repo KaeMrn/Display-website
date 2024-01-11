@@ -5,69 +5,41 @@ export default function Form(){
     
 
     return (
-        <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          <div className="border rounded-lg shadow-sm bg-white dark:bg-gray-800">
-            <div className="flex flex-row items-center justify-between pb-2 space-y-0 px-4 pt-4">
-              <h2 className="text-sm font-medium">Make a Reservation</h2>
+      <div className="bg-gray-300 h-screen">
+        <div className="grid gird-cols-2 bg-red-500">
+          <div className="col-span-1 hidden lg:flex w-1/2 items-center justify-center h-full">
+            <img src="https://images.unsplash.com/photo-1574966739987-65e38db0f7ce?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             alt="reservation pic"/> 
+         </div>
+         <div className="col-span-2 bg-white w-full flex items-center justify-center lg:w-1/2 h-full">
+          <form>
+            <h2>Book A Table</h2>
+            <div className="p-3">
+              <label className="text-md font-medium"
+              htmlFor="">Name</label>
+             <input 
+             className='border-2 mt-2 py-1 px-2 border-gray-300 rounded block min-h-[auto] w-full'
+             type="text"
+             id="name"
+             name="name"
+             />
             </div>
-            <div className="p-4">
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-700" htmlFor="date">
-                    Date
-                  </label>
-                  <input
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    id="date"
-                    required
-                    type="date"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-700" htmlFor="time">
-                    Time
-                  </label>
-                  <input
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    id="time"
-                    required
-                    type="time"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-700" htmlFor="guests">
-                    Number of Guests
-                  </label>
-                  <input
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    id="guests"
-                    min="1"
-                    required
-                    type="number"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-700" htmlFor="requirements">
-                    Special Requirements
-                  </label>
-                  <input
-                    className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                    id="requirements"
-                    type="text"
-                  />
-                </div>
-                <button
-                  className="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  type="submit"
-                >
-                  Book Reservation
-                </button>
-              </form>
+            <div className="p-3">
+              <label className="text-md font-medium"
+              htmlFor="">Number of people</label>
+             <input 
+             className='border-2 mt-2 py-1 px-2 border-gray-300 rounded block min-h-[auto] w-full'
+             type="number"
+             id="people"
+             name="people"
+             />
             </div>
-          </div>
+          </form>
+         </div>
+          
+
         </div>
-      </main>
+        </div>
   )
 }
 

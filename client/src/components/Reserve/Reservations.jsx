@@ -1,10 +1,9 @@
 import React from "react";
-import Calendar from "./Calendar";
-
+import Form from "./Form";
 export default function Reservations(){
     return(
-        <div className="mt-8">
-            <Calendar />
+        <div>
+            <Form />
         </div>
     )
 }
