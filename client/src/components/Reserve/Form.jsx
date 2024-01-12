@@ -19,7 +19,7 @@ export default function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/form/submit', formData);
+      const response = await axios.post('http://localhost:5000/api/Reservations/submit', formData);
       console.log(response.data);
       alert('Form submitted successfully');
     } catch (error) {
@@ -69,6 +69,8 @@ export default function Form() {
                   className="border-2 mt-2  px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="number"
                   name="guests"
+                  min="1" 
+                  max="10"
                   onChange={handleChange}
                 />
               </div>
@@ -81,6 +83,8 @@ export default function Form() {
                 <input
                   className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="date"
+                  min={new Date().toISOString().split("T")[0]} // today's date as the minimum
+                  max="2024-02-20" 
                   name="date"
                   onChange={handleChange}
                 />
@@ -89,12 +93,16 @@ export default function Form() {
                 <label className="text-md font-medium" htmlFor="username">
                   Time
                 </label>
-                <input
+                <select
                   className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="time"
                   name="time"
-                  onChange={handleChange}
-                />
+                  onChange={handleChange}>
+                  <option value="18:00">6:00 PM</option>
+                  <option value="18:30">6:30 PM</option>
+                  <option value="19:00">7:00 PM</option>
+                  </select>
+
               </div>
             </div>
             <div className="fields gap-2 p-1">
@@ -116,6 +124,7 @@ export default function Form() {
                 className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                 type="text-area"
                 name="specialInstructions"
+                maxLength="200"
                 onChange={handleChange}
               />
             </div>

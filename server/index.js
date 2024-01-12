@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/database');
-const formRoutes = require('./routes/formRoutes'); // Adjust the path as needed
+const formRoutes = require('./routes/formRoutes'); 
+const timeSlotRoutes= require('./routes/timeSlotRoutes') ;
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -13,7 +14,9 @@ app.use(cors({
 
 app.use(express.json());
 
-app.use('/api/form', formRoutes);
+app.use('/api/Reservations', formRoutes);
+app.use('/api/timeSlots', timeSlotRoutes);
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

@@ -9,4 +9,4 @@ const formSchema = new mongoose.Schema({
     specialInstructions: String,
   });
   
-  module.exports = mongoose.model('Form', formSchema);
+  module.exports = mongoose.model('Reservations', formSchema);
