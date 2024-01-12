@@ -7,7 +7,7 @@ export default function Form() {
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1482275548304-a58859dc31b7?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center blur-sm"></div>
       <div className='bg-black-gradient absolute top-0 left-0 w-full h-screen'/>
 
-      <div className="border-none h-[80vh] w-full mt-16 mx-20 border relative flex flex-row">
+      <div className="border-none w-full mx-20 mt-10 lg:h-[80vh] border relative flex flex-row">
         <div className="flex-col lg:flex lg:w-1/3 h-full hidden">
           <img
             src="https://images.unsplash.com/photo-1482275548304-a58859dc31b7?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -17,7 +17,7 @@ export default function Form() {
         </div>
 
         <div className="bg-white lg:flex flex-col lg:w-2/3 h-full w-full">
-          <form className="bg-red-500 w-full h-full p-4 ">
+          <form className="bg-white w-full h-full p-6 flex flex-col justify-center">
             <h2 className="text-3xl pb-6 text-center">Make A Reservation</h2>
             <div className="fields flex flex-row gap-2 p-1">
               <div className="w-1/2 flex-col">
