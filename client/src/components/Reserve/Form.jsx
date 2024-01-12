@@ -7,8 +7,8 @@ export default function Form() {
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1482275548304-a58859dc31b7?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center blur-sm"></div>
       <div className='bg-black-gradient absolute top-0 left-0 w-full h-screen'/>
 
-      <div className="border-none h-[80vh] w-full mt-16 flex flex-row mx-20 border relative">
-        <div className="flex-col lg:flex lg:w-[1/3] h-full hidden">
+      <div className="border-none h-[80vh] w-full mt-16 mx-20 border relative flex flex-row">
+        <div className="flex-col lg:flex lg:w-1/3 h-full hidden">
           <img
             src="https://images.unsplash.com/photo-1482275548304-a58859dc31b7?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
@@ -16,36 +16,36 @@ export default function Form() {
           />
         </div>
 
-        <div className="bg-white p-5 lg:flex flex-col lg:w-2/3 h-full w-full flex justify-center items-center">
-          <form className="bg-white w-full h-full p-4">
+        <div className="bg-white lg:flex flex-col lg:w-2/3 h-full w-full">
+          <form className="bg-red-500 w-full h-full p-4 ">
             <h2 className="text-3xl pb-6 text-center">Make A Reservation</h2>
-            <div className="fields flex flex-row gap-2 p-3">
+            <div className="fields flex flex-row gap-2 p-1">
               <div className="w-1/2 flex-col">
                 <label className="text-md font-medium" htmlFor="username">
                   Full Name
                 </label>
                 <input
-                  className="border-2 mt-2 py-1 px-2 border-gray-300 rounded block min-h-[auto] w-full"
+                  className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="text"
                 />
               </div>
-              <div className="w-1/2 flex-col">
+              <div className="w-1/2 ">
                 <label className="text-md font-medium" htmlFor="username">
                   Guests
                 </label>
                 <input
-                  className="border-2 mt-2 py-1 px-2 border-gray-300 rounded block min-h-[auto] w-full"
+                  className="border-2 mt-2  px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="number"
                 />
               </div>
             </div>
-            <div className="fields flex flex-row gap-2 p-3">
+            <div className="fields flex flex-row gap-2 p-1">
               <div className="w-1/2 flex-col">
                 <label className="text-md font-medium" htmlFor="Date">
                   Date
                 </label>
                 <input
-                  className="border-2 mt-2 py-1 px-2 border-gray-300 rounded block min-h-[auto] w-full"
+                  className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="date"
                 />
               </div>
@@ -54,31 +54,31 @@ export default function Form() {
                   Time
                 </label>
                 <input
-                  className="border-2 mt-2 py-1 px-2 border-gray-300 rounded block min-h-[auto] w-full"
+                  className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="time"
                 />
               </div>
             </div>
-            <div className="fields gap-2 p-3">
+            <div className="fields gap-2 p-1">
               <label className="text-md font-medium" htmlFor="username">
                 Email
               </label>
               <input
-                className="border-2 mt-2 py-1 px-2 border-gray-300 rounded block min-h-[auto] w-full"
+                className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                 type="email"
               />
             </div>
-            <div className="fields gap-2 p-3">
+            <div className="fields gap-2 p-1">
               <label className="text-md font-medium" htmlFor="text">
                 Special Instructions
               </label>
               <textarea
-                className="border-2 mt-2 py-1 px-2 border-gray-300 rounded block min-h-[auto] w-full"
+                className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                 type="text-area"
               />
             </div>
 
-            <div className="flex justify-center items-center mt-5">
+            <div className="flex justify-center items-center mt-4">
               <Button title="Book Table" className={"border-gray-400"} />
             </div>
           </form>
