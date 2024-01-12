@@ -1,7 +1,35 @@
-import React from "react";
+import React, { useState } from 'react';
+import axios from 'axios';
 import Button from "../Button";
 
 export default function Form() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    guests: '',
+    date: '',
+    time: '',
+    specialInstructions: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/api/form/submit', formData);
+      console.log(response.data);
+      alert('Form submitted successfully');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Error submitting form');
+    }
+  };
+
+
+
   return (
     <div className="h-screen flex justify-center items-center overflow-hidden relative">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1482275548304-a58859dc31b7?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center blur-sm"></div>
@@ -17,7 +45,9 @@ export default function Form() {
         </div>
 
         <div className="bg-white lg:flex flex-col lg:w-2/3 h-full w-full">
-          <form className="bg-white w-full h-full p-6 flex flex-col justify-center">
+          <form 
+          onSubmit={handleSubmit}
+          className="bg-white w-full h-full p-6 flex flex-col justify-center">
             <h2 className="text-3xl pb-6 text-center">Make A Reservation</h2>
             <div className="fields flex flex-row gap-2 p-1">
               <div className="w-1/2 flex-col">
@@ -27,6 +57,8 @@ export default function Form() {
                 <input
                   className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="text"
+                  name="fullName"
+                  onChange={handleChange}
                 />
               </div>
               <div className="w-1/2 ">
@@ -36,6 +68,8 @@ export default function Form() {
                 <input
                   className="border-2 mt-2  px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="number"
+                  name="guests"
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -47,6 +81,8 @@ export default function Form() {
                 <input
                   className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="date"
+                  name="date"
+                  onChange={handleChange}
                 />
               </div>
               <div className="w-1/2 flex-col">
@@ -56,6 +92,8 @@ export default function Form() {
                 <input
                   className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="time"
+                  name="time"
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -66,6 +104,8 @@ export default function Form() {
               <input
                 className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                 type="email"
+                name="email"
+                onChange={handleChange}
               />
             </div>
             <div className="fields gap-2 p-1">
@@ -75,11 +115,13 @@ export default function Form() {
               <textarea
                 className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                 type="text-area"
+                name="specialInstructions"
+                onChange={handleChange}
               />
             </div>
 
             <div className="flex justify-center items-center mt-4">
-              <Button title="Book Table" className={"border-gray-400"} />
+              <Button title="Book Table" className={"border-gray-400"} type="submit" />
             </div>
           </form>
         </div>
