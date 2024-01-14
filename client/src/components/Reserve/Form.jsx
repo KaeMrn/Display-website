@@ -31,7 +31,7 @@ export default function Form() {
       try{
         const response = await axios.get(`http://localhost:5000/api/timeSlots/${dayOfWeek}`);
         
-        setTimeSlots(response.data.Time || []);
+        setTimeSlots(response.data || []);
         console.log(response.data)
       }//incase of errors or not selecting a date we give empty array for time
       catch (errors){
