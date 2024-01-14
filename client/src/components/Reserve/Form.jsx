@@ -3,6 +3,7 @@ import axios from 'axios';
 import Button from "../Button";
 
 export default function Form() {
+  const [timeSlots, setTimeSlots] = useState([]);
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -12,9 +13,35 @@ export default function Form() {
     specialInstructions: '',
   });
 
+ //update the values of the form input fields  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  // make selected day and time slots tied to the information in the BDD
+  const handleDateChange = async (e) => {
+    const newDate = e.target.value;
+    setFormData({ ...formData, date: newDate});
+    //if new date selected we calculate the value
+    if (newDate){
+      const dayOfWeek = new Date(newDate).getDay();
+      console.log(dayOfWeek);
+
+      //api to fetch time slots for the day
+      try{
+        const response = await axios.get(`http://localhost:5000/api/timeSlots/${dayOfWeek}`);
+        
+        setTimeSlots(response.data.Time || []);
+        console.log(response.data)
+      }//incase of errors or not selecting a date we give empty array for time
+      catch (errors){
+        console.error('Error fetching the available time slots');
+        setTimeSlots([]);
+      }
+    } else {
+      setTimeSlots([]);
+    }
+  } 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -86,7 +113,8 @@ export default function Form() {
                   min={new Date().toISOString().split("T")[0]} // today's date as the minimum
                   max="2024-02-20" 
                   name="date"
-                  onChange={handleChange}
+                  value={formData.date}
+                  onChange={handleDateChange}
                 />
               </div>
               <div className="w-1/2 flex-col">
@@ -97,10 +125,11 @@ export default function Form() {
                   className="border-2 mt-2 px-2 border-gray-300 rounded block min-h-[auto] w-full"
                   type="time"
                   name="time"
+                  value={formData.time}
                   onChange={handleChange}>
-                  <option value="18:00">6:00 PM</option>
-                  <option value="18:30">6:30 PM</option>
-                  <option value="19:00">7:00 PM</option>
+                  {timeSlots.map((Time, index) =>(
+                    <option key={index} value={Time}>{Time}</option>
+                  ))}
                   </select>
 
               </div>
