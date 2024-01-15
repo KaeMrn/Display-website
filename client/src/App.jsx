@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home/Home'
 import Reservations from './components/Reserve/Reservations';
 import Footer from './components/Home/Footer';
+import FormVerification from './components/Reserve/FormVerification';
 
 function App() {
 
@@ -21,6 +22,8 @@ function App() {
           </>
         } />
         <Route path="/reservations" element={<Reservations />} />
+        <Route path="/verify/:token" element={<FormVerification />} />
+
       </Routes>
       <Footer />
     </Router>
