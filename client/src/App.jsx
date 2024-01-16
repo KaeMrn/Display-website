@@ -22,7 +22,7 @@ function App() {
           </>
         } />
         <Route path="/reservations" element={<Reservations />} />
-        <Route path="/verify/:token" element={<FormVerification />} />
+        <Route path="/reservations/verify/:token" element={<FormVerification />} />
 
       </Routes>
       <Footer />

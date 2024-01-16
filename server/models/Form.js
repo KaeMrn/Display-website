@@ -14,12 +14,5 @@ const formSchema = new mongoose.Schema({
     tokenExpiry: Date,
   });
 
-  formSchema.pre('save', function(next){
-    if(this.isNew){
-      this.verificationToken = crypto.randomBytes(20).toString('hex');
-      this.tokenExpiry = Date.now() + 3600; //one hour from now
-    }
-    next();
-  });
   
   module.exports = mongoose.model('Reservations', formSchema);

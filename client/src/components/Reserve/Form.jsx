@@ -46,7 +46,7 @@ export default function Form() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/Reservations/submit', formData);
+      const response = await axios.post('http://localhost:5000/api/reservations/submit', formData);
       console.log(response.data);
       alert('Form submitted successfully');
     } catch (error) {

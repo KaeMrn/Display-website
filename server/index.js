@@ -4,6 +4,7 @@ const connectDB = require('./config/database');
 const formRoutes = require('./routes/formRoutes'); 
 const timeSlotRoutes= require('./routes/timeSlotRoutes') ;
 const app = express();
+require('dotenv').config();
 const PORT = process.env.PORT || 5000;
 
 connectDB();
