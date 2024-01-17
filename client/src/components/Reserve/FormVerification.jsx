@@ -19,8 +19,11 @@ export default function FormVerification() {
     }, [token]); // Dependency array with token ensures this runs only once per token
 
     return (
-        <div className='h-screen bg-red-300 flex justify-center items-center'>
-            {message}
+        <div className='h-screen bg-white flex justify-center items-center'>
+            <div className='bg-white border border-gray-200 p-8 text-center text-gray-800 shadow-xl max-w-xl lg:max-w-3xl rounded-3xl'>
+                Thank you for verifying
+                {message}
+            </div>
         </div>
     );
 }
